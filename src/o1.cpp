@@ -336,6 +336,8 @@ void O1::onTokenRequestFinished() {
         return;
     }
 
+    setTokenSecret(requestTokenSecret_ );
+
     // Continue authorization flow in the browser
     QUrl url(authorizeUrl());
 #if QT_VERSION < 0x050000
